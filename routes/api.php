@@ -81,3 +81,4 @@ use Illuminate\Support\Facades\Route;
     Route::post('/v1/user/address/new', [\App\Http\Controllers\v1\UserAddressController::class, 'newUserAddress']);
     Route::post('/v1/user/address/update', [\App\Http\Controllers\v1\UserAddressController::class, 'updateUserAddress']);
     Route::delete('/v1/user/address/delete', [\App\Http\Controllers\v1\UserAddressController::class, 'deleteUserAddress']);
+
