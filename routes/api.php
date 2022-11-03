@@ -64,6 +64,7 @@ use Illuminate\Support\Facades\Route;
 
 // section Routes_Settings
     Route::get('/v1/settings/all', [SettingsController::class, 'getSettings']);
+    Route::get('/v1/settings/pages', [SettingsController::class, 'getSettingsPages']);
     Route::post('/v1/settings/set', [SettingsController::class, 'setSettings']);
     Route::post('/v1/settings/update', [SettingsController::class, 'updateSettings']);
     Route::delete('/v1/settings/delete', [SettingsController::class, 'deleteSettings']);
@@ -78,6 +79,7 @@ use Illuminate\Support\Facades\Route;
 // section Routes_Product
     Route::get('/v1/product/all', [ProductController::class, 'getProducts']);
     Route::get('/v1/product/view/{productSlug}', [ProductController::class, 'getProductBySlug']);
+    Route::get('/v1/products/category/{categorySlug}', [ProductController::class, 'getProductByCategorySlug']);
     Route::get('/v1/business/products/{businessUrl}', [ProductController::class, 'getProductByBusinessSlug']);
     Route::post('/v1/product/new', [ProductController::class, 'newProduct']);
     Route::post('/v1/product/update', [ProductController::class, 'updateProduct']);
